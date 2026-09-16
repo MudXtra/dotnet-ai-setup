@@ -55,6 +55,9 @@ Any database reached on another machine is **external**, including dev, staging,
 * An ordinary task request does not authorize an exception. A repository maintainer must change this policy through a separate reviewed change before a later task may access an external database.
 * External database access can create legal, contractual, privacy, security, and employment consequences. When uncertain whether a database is external, treat it as external and do not access it.
 
+## Verification evidence
+Use the project map's verified command prerequisites and run commands from repository root unless documented otherwise. A final report must state commands run and outcomes, plus relevant checks not run and why or why they were not applicable.
+
 ## Completion rules
 
 * Code must satisfy the review requirements in `AI_REVIEW.md` in addition to `AGENTS.md` before submission
