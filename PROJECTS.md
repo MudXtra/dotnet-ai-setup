@@ -10,6 +10,11 @@ PROJECTS.md is a maintained map of verified facts, not a task list or source of 
 - {{TEST_PROJECT_PATH}} owns bUnit/xUnit tests; N/A is allowed
 - {{PROTECTED_PROJECT_PATHS}} allows N/A; do not edit unless explicitly instructed.
 
+## Verification prerequisites and evidence
+Run commands from the repository root unless a documented command names another working directory. Before running a command, use verified project facts for the target SDK/global.json policy, project or test-project path, configuration, and test runner. Run a focused test before its full test project when it applies; `--no-build` is valid only after a successful matching build. Use broader test-project, solution, or cross-project validation only when the change, dependency, shared setting, or solution wiring justifies it.
+
+In the final report, name every command actually run and its outcome. Name relevant checks not run, explain why they were not run or not applicable, and never imply a build or test ran when this project map has no runnable target.
+
 ## Targeted Verification
 - Use targeted verification against <project.csproj> unless broader validation is explicitly requested.
 - Prefer focused test execution before running the full test project.
