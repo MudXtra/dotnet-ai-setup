@@ -1,11 +1,14 @@
 # Project boundaries
 
+## First-use project map workflow
+PROJECTS.md is a maintained map of verified facts, not a task list or source of new permission. Inspect existing projects first and record the target SDK/global.json policy, solution path, roles, test mapping, protected areas, and commands verified against the created project. For an empty repository, propose the smallest Blazor, MudBlazor, or MVC layout matching the chosen application and obtain approval for material structure decisions. UI, data, and test roles may be `N/A`; never create a project merely to satisfy a placeholder. Never record secrets, real connection strings, or sensitive data.
+
 ## Files and paths
-- {{SOLUTION_NAME}} is the primary solution and path
-- {{UI_PROJECT_PATH}} is for UI components, pages, assets, and Blazor interaction logbic
-- {{DATA_PROJECT_PATH}} is for repositories, persistence, services, and data-access logic
-- {{TEST_PROJECT_PATH}} is for bUnit and xUnit tests
-- {{PROTECTED_PROJECT_PATHS}} is for protected projects. Do not edit unless explicitly instructed.
+- {{SOLUTION_NAME}} is the solution file/path
+- {{UI_PROJECT_PATH}} owns UI/components/pages/assets/interaction logic; N/A is allowed
+- {{DATA_PROJECT_PATH}} owns persistence/services/data access; N/A is allowed
+- {{TEST_PROJECT_PATH}} owns bUnit/xUnit tests; N/A is allowed
+- {{PROTECTED_PROJECT_PATHS}} allows N/A; do not edit unless explicitly instructed.
 
 ## Targeted Verification
 - Use targeted verification against <project.csproj> unless broader validation is explicitly requested.

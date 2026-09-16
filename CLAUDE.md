@@ -1,0 +1,3 @@
+@AGENTS.md
+@PROJECTS.md
+@AI_REVIEW.md

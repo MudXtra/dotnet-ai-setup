@@ -1,5 +1,4 @@
-﻿# .editorconfig - DRSJuryManager
-
+﻿
 root = true
 
 [*]
@@ -7,17 +6,9 @@ charset = utf-8-bom
 end_of_line = lf
 indent_style = space
 trim_trailing_whitespace = true
-dotnet_diagnostic.BCB001.severity = error
-dotnet_diagnostic.BCB002.severity = error
-dotnet_diagnostic.BCB003.severity = error
-dotnet_diagnostic.BCB004.severity = error
-dotnet_diagnostic.BCB005.severity = warning
-dotnet_diagnostic.BCB006.severity = warning
-dotnet_diagnostic.BCB007.severity = warning
 
 [*.{cs,razor}]
 indent_size = 4
-file_header_template = Copyright (c) Bell County, Texas. All rights reserved.
 
 [*.json]
 indent_size = 2
