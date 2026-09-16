@@ -25,8 +25,8 @@ The defaults reflect the technologies and practices used by the author. They are
 1. **Create your repository** and copy the starter files from this repository into it.
 2. **Create or add your application and test projects.** Use the solution structure that fits your application.
 3. **Configure `PROJECTS.md`** with your actual project paths, responsibilities, protected areas, and verification commands.
-4. **Review the defaults** in `AGENTS.md`, the test instructions, `.editorconfig`, and `Directory.Build.props`. Adapt them to your project before relying on them. Check file-header ownership and licensing as well.
-5. **Check configuration placement.** The supplied build and editor configuration lives at repository root and applies to source and test projects beneath it and preserve any existing configuration.
+4. **Review the defaults** in `AGENTS.md`, the test instructions, `src/.editorconfig`, and `Directory.Build.props`. Adapt them to your project before relying on them. This starter does not prescribe a file header; if your project requires one, configure `file_header_template` in the applicable EditorConfig after checking ownership and licensing.
+5. **Check configuration placement.** `Directory.Build.props` lives at repository root and supplies build defaults to projects beneath it, unless a nearer build configuration overrides discovery. `src/.editorconfig` applies only beneath `src/`, not to sibling test projects. If tests live outside `src/`, deliberately extend the editor settings to cover them (for example, by merging them into a root `.editorconfig`). Preserve existing configuration and update instruction paths if you relocate files.
 6. **Keep nullable and warnings-as-errors enabled for new projects; document intentional exceptions in `PROJECTS.md`.**
 7. **Run your documented build and test commands**, then commit the configured starting point.
 
@@ -43,7 +43,7 @@ You can ask AI to inspect your solution and draft `PROJECTS.md`. Review the resu
 | `.github/copilot-instructions.md` | Directs GitHub Copilot to the shared repository guidance. |
 | `.github/instructions/tests.instructions.md` | Testing conventions and regression-test guidance. |
 | `.github/pull_request_template.md` | A consistent structure for describing and checking changes. |
-| `src/.editorconfig` | Formatting and code-style preferences. |
+| `src/.editorconfig` | Formatting and code-style preferences for files beneath `src/`. |
 | `Directory.Build.props` | Shared .NET build settings for projects within its scope. |
 | `.gitignore` and `.gitattributes` | Source-control defaults for .NET development. |
 
@@ -72,7 +72,7 @@ A well-maintained project map lets you describe the outcome you want without exp
 
 Once the template is configured, give your AI tool a concrete task and the expected outcome. Ask it to follow `AGENTS.md`, use `PROJECTS.md` to find the right projects and commands, and check its changes against `AI_REVIEW.md`.
 
-For a multi-step task you want completed without routine stage pauses, explicitly request end-to-end execution within the documented boundaries.
+For an approved task, end-to-end execution is the default: the agent continues implementation and proportional verification without routine stage pauses. It pauses only at a material boundary or explicit request; scope changes and decisions requiring approval still need your direction.
 
 Repository instructions are guidance, not a security sandbox. Tool support for discovering instruction files varies, so confirm your AI tool is loading the relevant guidance. Review the resulting changes and verification evidence before accepting them.
 

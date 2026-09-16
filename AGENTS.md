@@ -17,7 +17,8 @@ Follow this file as the primary instruction source. User requests and nested `AG
 * target verification by default; broader verification is justified by shared build settings, dependencies, solution wiring, or cross-project changes
 * keep changes small and targeted
 * prefer existing patterns over introducing new abstractions
-* follow `src/.editorconfig` and add required file headers
+* follow the applicable EditorConfig settings (`src/.editorconfig` covers files beneath `src/` in this starter)
+* add file headers only when the applicable EditorConfig defines a `file_header_template`; do not invent ownership or licensing text
 * treat all application, user, staff, and internal data as sensitive
 * add XML `<summary>` docs for all public properties, classes, and methods
 * preserve keyboard navigation and accessible naming for interactive UI
