@@ -13,8 +13,6 @@
 - [ ] No secrets, private URLs, or sensitive data committed
 - [ ] Local development secrets, if any, are stored in user secrets
 
-## Related Jira
+## Related work
 
-JIRA: []
-
-<!-- Example: JIRA: [ABC-123] -->
+<!-- Optional: add issue or ticket references using this project's convention. -->

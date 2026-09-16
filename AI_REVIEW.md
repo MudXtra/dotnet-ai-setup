@@ -7,6 +7,7 @@ Use this checklist before proposing or accepting code changes.
 * confirm the change stays within the requested task
 * confirm no unrelated refactors or file moves were introduced
 * confirm protected projects were not modified unless explicitly requested
+* distinguish identifying a rule needing revision from authority to silently violate it
 
 ## Architecture
 

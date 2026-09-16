@@ -14,7 +14,7 @@ Follow this file as the primary instruction source. User requests and nested `AG
 ### Do
 
 * default to TDD when behavior changes
-* target specific projects only; solution-wide local commands are too slow
+* target verification by default; broader verification is justified by shared build settings, dependencies, solution wiring, or cross-project changes
 * keep changes small and targeted
 * prefer existing patterns over introducing new abstractions
 * follow `src/.editorconfig` and add required file headers
@@ -25,14 +25,14 @@ Follow this file as the primary instruction source. User requests and nested `AG
 
 ### Don't
 
-* do not run solution-wide build, test, or format commands unless explicitly requested
+* do not run broad validation without a shared-change justification
 * do not commit secrets, tokens, passwords, certificates, private URLs, or real connection strings
 * do not put secrets in tracked `appsettings*.json`, tests, docs, or examples
 * do not circumvent, weaken, reinterpret, or work around the [External database boundary](#external-database-boundary), directly or indirectly
 * do not add dependencies without approval
 * do not suppress warnings to get a build through
 * do not make large refactors or cross-project moves without approval
-* do not suggest changes that conflict with `AI_REVIEW.md` or existing project patterns without approval
+* do not silently implement departures from rules or patterns; reviews may recommend revision
 
 ## Working rules
 
@@ -69,6 +69,6 @@ Any database reached on another machine is **external**, including dev, staging,
 
 ## Review and Escalation
 
-* If you are unsure about any aspect of the request, ask for clarification.
+* Ask only where uncertainty materially affects scope, correctness, safety, authority, or irreversible consequences.
 * If a policy needs hard enforcement and an existing analyzer does not cover it, call that out. A custom analyzer may be required.
-* Pause between major stages of multi-step work unless the user asks for end-to-end execution.
+* Within an approved task, continue implementation and proportional verification end-to-end; pause only at a material boundary or explicit request.

@@ -1,17 +1,12 @@
 ﻿<Project>
 
+  <!-- Root policy applies to all projects; nullable and warnings-as-errors are recommended defaults for new projects. -->
   <PropertyGroup>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <LangVersion>latest</LangVersion>
-    <AnalysisLevel>latest</AnalysisLevel>
     <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
   </PropertyGroup>
 
-  <ItemGroup>
-    <AdditionalFiles Include="$(MSBuildProjectFullPath)" />
-    <AdditionalFiles Include="appsettings*.json" />
-  </ItemGroup>
 
 </Project>
