@@ -12,7 +12,7 @@ Defaults below are for common .NET test stacks. If a repository uses a different
 ### Do
 - default to xUnit for test execution
 - default to bUnit for Blazor component and Razor page tests
-- default to AwesomeAssertions for assertions, do not use FluentAssertions or other assertion libraries without approval
+- default to AwesomeAssertions for assertions; do not use unapproved or paid assertion libraries
 - keep tests in the test project path defined in `PROJECTS.md`
 - use bUnit when testing rendered markup, parameters, cascading values, user interaction, validation messages, event callbacks, or conditional UI
 - use plain unit tests when logic can be tested without rendering a component
