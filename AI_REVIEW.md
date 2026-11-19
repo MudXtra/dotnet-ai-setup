@@ -5,15 +5,15 @@ Use this checklist before proposing or accepting code changes. Unless target rep
 ## Scope
 
 * confirm the change stays within the requested task
+* confirm the change is the smallest possible change to solve the problem
 * confirm no unrelated refactors or file moves were introduced
 * confirm protected projects were not modified unless explicitly requested
 * confirm AI tooling/setup changes and feature changes are kept in separate PRs
-* distinguish identifying a rule needing revision from authority to silently violate it
 
 ## Architecture & dependencies
 
 * confirm logic is placed in the correct project and fits existing patterns
-* confirm dependency direction remains appropriate
+* confirm dependency direction remains appropriate and within repository guidelines if they exist
 * confirm no unapproved dependencies were introduced; prefer dependencies that are free and open source when they exist
 
 ## Security and data handling
@@ -27,6 +27,11 @@ Use this checklist before proposing or accepting code changes. Unless target rep
 * confirm component parameters are auto-properties only and never set through `@ref`
 * confirm existing component, UI, and application patterns are preserved unless a change is required
 * confirm accessibility remains intact, including keyboard support and ARIA expectations
+* confirm UI typography and text presentation follow consistent design-system standards:
+  * use readable, responsive font sizes and line heights;
+  * enforce concise, grammatically correct text with consistent capitalization and punctuation; 
+  * allow natural wrapping without clipping, overflow, or excessive line lengths;
+  * apply ellipsis only when space is constrained, truncation is appropriate, and the complete text remains accessible. Never truncate critical information, actions, or instructions.
 
 ## Testing
 
@@ -56,6 +61,7 @@ Use this checklist before proposing or accepting code changes. Unless target rep
 * provide exact verification commands for any suggested changes so reviewers or models without autonomous tool execution can run them directly
 * use repository PR templates and standard review formatting by default (see `templates/` for base reference templates)
 * do not request unnecessary cleanup outside task scope
+* mention task scope witnessed for items that should have failed review
 
 ## Verification commands
 
