@@ -22,6 +22,10 @@ Name specific commands executed and their results. If some tests could not be ru
   - `dotnet build ...`
   - `dotnet test ...`
 - **Manual / Visual checks (if applicable):**
+<!--
+- __Screenshots required for visual UI changes, video where only video can show__
+- __Screenshots or video must be human made__
+-->
   - 
 
 ## Checklist
